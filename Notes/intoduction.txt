@@ -1,0 +1,10 @@
+Modifying and Analyzing data using SQL:
+
+methods for modifying data:
+	concatenating
+	trimming
+	changing case
+	substring functions
+	date and time strings
+
+Case statements : if, then, else

@@ -1,0 +1,11 @@
+For any analysis of the data starts with a data understanding 
+Data understanding :
+Subject area understanding:
+1.understanding where data joins are 
+2.differentiating integers from strings
+3.investing time to understand your subject
+Business understanding:
+1.solving the business problem
+2.subjective area
+
+predict the data whether or not a customer is likely to buy our product

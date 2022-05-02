@@ -1,0 +1,36 @@
+Text Strings :
+	Retrive dta in the format you need client vs server formatting
+
+SQL supports:
+	concatenate
+	Substring
+	Trim
+	Upper
+	Lower
+
+
+Concatenate :
+SQL server supports + instead of ||
+ex: select companyname, contactname, 
+    companyname || '(' || contactname || ')
+    from customers    --returns 3 columns
+
+Trim :
+leading or trailing spaces from strings
+func : TRIM, RTRIM, LTRIM
+ex: select TRIM("       you are    trimmed.    ") AS trimmed string
+
+Substring:
+Returns specified number of characters from a particular position of a given string
+syntax : SUBSTR(string_name,
+	        position,
+		characters_to_be_returned_from_position
+	 )
+ex: select firstname SUBSTR(firstname,2,3)
+    FROM employees
+    where departmentid = 60;
+
+UPPER and LOWER:
+converts string to upper or lowercases
+syntax: SELECT UPPER(column_name) FROM table_name
+	SELECT LOWER(column_name) FROM table_name

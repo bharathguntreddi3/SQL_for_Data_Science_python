@@ -1,0 +1,44 @@
+Case Statements:
+	Built-in function i.e if-then-else statement used in most programming languages
+can be used to SELECT, INSERT, UPDATE and DELETE  statements
+
+syntax:
+	CASE input_expression
+	     WHEN when_expression THEN
+	result_expressionp[...n]
+		[ ELSE else_result_expression]
+	END
+
+ex:
+SELECT employeeid,
+fname,
+lname,
+city,
+CASE city 
+	when 'calgary' THEN 'calgary'
+ELSE 'other'
+	END calgary
+FROM employees
+order by lname, fname;
+-- city names with calgary are printed calgary for other city names printed other
+
+
+search case statement:
+syntax: CASE WHEN boolean_expression
+	THEN result_expression[...n]
+	[ ELSE else_result_expression]
+	END
+ex:
+SELECT trackid,
+name,
+bytes,
+CASE 
+WHEN bytes<300000 THEN 'small'
+WHEN bytes>=300001 AND bytes<=500000 THEN 'medium'
+WHEN bytes>500001 THEN 'large'
+ELSE 'other'
+END bytescategory
+FROM tracks;
+-- analyzies the data based on the bytes covered
+
+

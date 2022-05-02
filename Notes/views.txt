@@ -1,0 +1,29 @@
+VIEW in SQL:
+view is stored query is you can create a imaginery table that is not stored in the database
+The view will be deleted after the database connection has ended
+
+syntax: CREATE [TEMP] VIEW [IF NOT EXISTS]
+	view_name(column-name-list)
+	AS
+	select -statement;
+ 
+ex:
+CREATE VIEW my_view
+AS
+SELECT r.regiondescription,
+t.territorydescription,
+e.lname,
+e.fname
+FROM region r
+INNER JOIN territories t on r.regionid=t.regionid
+INNER JOIN employeeterritories et on t.territoryid=et.territoryid
+INNER JOIN employee e on et.employeeid=e.employeeid
+-- creates view as a new table from the select statement
+
+SELECT * 
+FROM my_view    -- shows your view table
+
+DROP VIEW my_view   -- delete the view table 
+
+
+  

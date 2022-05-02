@@ -1,0 +1,9 @@
+Data Governance and profiling :
+
+Data profiling:
+	Examining data for completeness and accuracy.Important to understand your data before you query it
+
+Examine the column data profiles i.e examine the full column details
+
+Governance data:
+	understand your read and write capabilities, clean up your environments, understand your promotion process.

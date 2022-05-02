@@ -1,0 +1,49 @@
+Data Variables:
+Dates are stored as datetypes
+each dbms uses its own type of datatypes 
+formats:
+	thursday, April28th, 2022
+	4/28/2022 9:8:33 P.M. EST
+	4/28/2022 21:8:33 P.M. GMT
+	2842022 (julian format)
+
+Date formats:
+	date : YYYY:MM:DD
+	datetime : YYYY:MM:DD HH:MI:SS
+	timestamp : YYYY:MM:DD HH:MI:SS
+
+date and time functions:
+DATE(timestring, modifier, modifier, .....)
+TIME(timestring, modifier, modifier, .....)
+DATETIME(timestring, modifier, modifier, .....)
+JULIANDAY(timestring, modifier, modifier, .....)
+STRFTIME(format, timestring, modifier, modifier, .....)
+
+Modifiers:
+NNN days - start of year
+NNN hours - start of day
+NNN minutes - weekday N
+NNN.NNNN seconds - unixepoch
+NNN months - localtime
+NNN years - utc
+start of month
+
+EXAMPLES :
+--date formatting
+SELECT birthdate,
+STRFTIME('%y', birthdate) AS year,
+STRFTIME('%m', birthdate) AS month,
+STRFTIME('%d', birthdate) AS day
+FROM employees;
+----------------------------------------
+SELECT DATE('now');    -- current date
+-----------------------------------------
+SELECT STRFTIME('%y %m %d', 'now');
+-----------------------------------------
+-- computing age
+SELECT birthdate,
+STRFTIME('%y', birthdate) AS year,
+STRFTIME('%m', birthdate) AS month,
+STRFTIME('%d', birthdate) AS day,
+DATE(('now') - birthdate) AS age
+FROM employees;
